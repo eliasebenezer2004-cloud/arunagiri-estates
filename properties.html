@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Properties — Arunagiri Estates & Homes</title>
+  <meta name="description" content="Browse 50+ verified properties across Chennai, Coimbatore, Madurai, and more. Search, filter, and find your dream home in Tamil Nadu.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="LogoRealestate.png">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <img src="LogoRealestate.png" alt="Arunagiri Estates">
+        <span>Arunagiri</span><span class="gold">Estates</span>
+      </a>
+      <div class="header-nav" id="headerNav">
+        <a href="index.html" class="lang-en">Home</a><a href="index.html" class="lang-ta" style="display:none">முகப்பு</a>
+        <a href="about.html" class="lang-en">About</a><a href="about.html" class="lang-ta" style="display:none">அறிமுகம்</a>
+        <a href="properties.html" class="active lang-en">Properties</a><a href="properties.html" class="active lang-ta" style="display:none">சொத்துக்கள்</a>
+        <a href="services.html" class="lang-en">Services</a><a href="services.html" class="lang-ta" style="display:none">சேவைகள்</a>
+        <a href="nri.html" class="lang-en">NRI</a><a href="nri.html" class="lang-ta" style="display:none">என்.ஆர்.ஐ</a>
+        <a href="contact.html" class="lang-en">Contact</a><a href="contact.html" class="lang-ta" style="display:none">தொடர்பு</a>
+        <div class="header-lang">
+          <button data-lang="en" class="active">EN</button>
+          <button data-lang="ta">த</button>
+        </div>
+      </div>
+      <button class="header-menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-hero" style="padding:140px 0 80px;">
+    <div class="page-hero-bg">
+      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920&q=80" alt="Properties" loading="lazy">
+    </div>
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / <span>Properties</span>
+      </div>
+      <h1 class="h1 font-serif lang-en" style="color:var(--white);">Browse Properties</h1>
+      <h1 class="h1 font-serif lang-ta" style="display:none; color:var(--white);">சொத்துக்கள்</h1>
+      <p class="lang-en">50+ verified properties across Tamil Nadu's best locations</p>
+      <p class="lang-ta" style="display:none">தமிழ்நாட்டின் சிறந்த இடங்களில் 50+ சரிபார்க்கப்பட்ட சொத்துக்கள்</p>
+    </div>
+  </section>
+
+  <section class="section section-white" data-reveal>
+    <div class="filter-bar">
+      <div class="container">
+        <form class="filter-form" id="filterForm" onsubmit="event.preventDefault(); applyFilters();">
+          <select id="filterLocation"><option value="all" class="lang-en">All Locations</option><option value="all" class="lang-ta" style="display:none">அனைத்து இடங்களும்</option></select>
+          <select id="filterType"><option value="all" class="lang-en">All Types</option><option value="all" class="lang-ta" style="display:none">அனைத்து வகைகள்</option></select>
+          <select id="filterBudget"><option value="all" class="lang-en">All Budgets</option><option value="all" class="lang-ta" style="display:none">அனைத்து பட்ஜெட்டுகள்</option></select>
+          <select id="filterBHK"><option value="all" class="lang-en">All BHK</option><option value="all" class="lang-ta" style="display:none">அனைத்து படுக்கையறை</option></select>
+          <select id="filterStatus"><option value="all" class="lang-en">All Status</option><option value="all" class="lang-ta" style="display:none">அனைத்து நிலை</option></select>
+          <button type="submit" class="btn btn-gold"><i class="fas fa-search"></i> <span class="lang-en">Search</span><span class="lang-ta" style="display:none">தேடு</span></button>
+          <button type="reset" class="btn btn-outline" onclick="resetFilters()"><i class="fas fa-times"></i> <span class="lang-en">Reset</span><span class="lang-ta" style="display:none">மீட்டமை</span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad" id="results">
+    <div class="container">
+      <div class="result-bar">
+        <div class="result-count" id="resultCount"></div>
+        <select class="sort-select" id="sortSelect" onchange="applyFilters()">
+          <option value="default" class="lang-en">Sort: Default</option><option value="default" class="lang-ta" style="display:none">வரிசை: இயல்பு</option>
+          <option value="price-low" class="lang-en">Price: Low to High</option><option value="price-low" class="lang-ta" style="display:none">விலை: குறைந்த முதல் அதிக</option>
+          <option value="price-high" class="lang-en">Price: High to Low</option><option value="price-high" class="lang-ta" style="display:none">விலை: அதிக முதல் குறைந்த</option>
+          <option value="area" class="lang-en">Largest Area</option><option value="area" class="lang-ta" style="display:none">பெரிய பரப்பு</option>
+          <option value="newest" class="lang-en">Newest First</option><option value="newest" class="lang-ta" style="display:none">புதியது முதலில்</option>
+        </select>
+      </div>
+      <div class="property-grid" id="propertyGrid"></div>
+      <div class="pagination" id="pagination"></div>
+      <div id="noResults" style="display:none;text-align:center;padding:60px 0;">
+        <i class="fas fa-search" style="font-size:2.5rem;color:var(--gold);margin-bottom:16px;display:block;"></i>
+        <h3 class="lang-en" style="margin-bottom:8px;">No Properties Found</h3>
+        <h3 class="lang-ta" style="display:none;margin-bottom:8px;">சொத்துக்கள் எதுவும் கிடைக்கவில்லை</h3>
+        <p class="lang-en" style="color:var(--text-light);">Try adjusting your filters or browse all properties.</p>
+        <p class="lang-ta" style="display:none;color:var(--text-light);">உங்கள் வடிப்பான்களை சரிசெய்யவும் அல்லது அனைத்து சொத்துக்களையும் பார்க்கவும்.</p>
+        <button class="btn btn-outline" onclick="resetFilters()" style="margin-top:16px;"><span class="lang-en">Reset Filters</span><span class="lang-ta" style="display:none">வடிப்பான்களை மீட்டமை</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 data-reveal><span class="lang-en">Can't Find What You're Looking For?</span><span class="lang-ta" style="display:none">நீங்கள் தேடுவது கிடைக்கவில்லையா?</span></h2>
+      <p data-reveal><span class="lang-en">Let us help you find the perfect property. Our experts know every corner of Tamil Nadu's real estate market.</span><span class="lang-ta" style="display:none">எங்கள் நிபுணர்கள் தமிழ்நாட்டின் ரியல் எஸ்டேட் சந்தையின் ஒவ்வொரு மூலையையும் அறிவார்கள்.</span></p>
+      <div class="cta-buttons" data-reveal>
+        <a href="contact.html" class="btn btn-gold btn-lg"><i class="fas fa-calendar-alt"></i> <span class="lang-en">Get Personalised Help</span><span class="lang-ta" style="display:none">தனிப்பயனாக்கப்பட்ட உதவி பெற</span></a>
+        <a href="https://wa.me/9198400XXXXX" target="_blank" class="btn btn-outline-light btn-lg"><i class="fab fa-whatsapp"></i> <span class="lang-en">WhatsApp Us</span><span class="lang-ta" style="display:none">வாட்ஸ்அப்பில் எங்களை தொடர்பு கொள்ள</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-compact">
+    <div class="container">
+      <div class="footer-compact-logo">
+        <span class="lang-en">© 2026 Arunagiri Estates & Homes — Chennai, Tamil Nadu</span>
+        <span class="lang-ta" style="display:none">© 2026 அருணகிரி எஸ்டேட்ஸ் & ஹோம்ஸ் — சென்னை, தமிழ்நாடு</span>
+      </div>
+      <div class="footer-compact-links">
+        <a href="index.html" class="lang-en">Home</a><a href="index.html" class="lang-ta" style="display:none">முகப்பு</a>
+        <a href="properties.html" class="lang-en">Properties</a><a href="properties.html" class="lang-ta" style="display:none">சொத்துக்கள்</a>
+        <a href="about.html" class="lang-en">About</a><a href="about.html" class="lang-ta" style="display:none">அறிமுகம்</a>
+        <a href="contact.html" class="lang-en">Contact</a><a href="contact.html" class="lang-ta" style="display:none">தொடர்பு</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/9198400XXXXX" target="_blank" class="float-whatsapp"><i class="fab fa-whatsapp"></i><span class="tooltip lang-en">Chat with us</span><span class="tooltip lang-ta" style="display:none">எங்களுடன் பேச</span></a>
+  <button class="back-to-top"><i class="fas fa-chevron-up"></i></button>
+
+<script>
+/* MOBILE MENU */
+document.getElementById('menuToggle').addEventListener('click', function(){
+  document.getElementById('headerNav').classList.toggle('open');
+});
+
+/* LANGUAGE TOGGLE */
+(function(){
+  var lang = localStorage.getItem('aelang') || 'en';
+  document.documentElement.setAttribute('data-lang', lang);
+  document.querySelectorAll('.header-lang button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var l = this.getAttribute('data-lang');
+      document.documentElement.setAttribute('data-lang', l);
+      localStorage.setItem('aelang', l);
+      document.querySelectorAll('.header-lang button').forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll('.header-lang button[data-lang="'+l+'"]').forEach(function(b){ b.classList.add('active'); });
+      document.querySelectorAll('.lang-en').forEach(function(el){ el.style.display = (l==='en' ? '' : 'none'); });
+      document.querySelectorAll('.lang-ta').forEach(function(el){ el.style.display = (l==='ta' ? '' : 'none'); });
+    });
+    if(btn.getAttribute('data-lang')===lang) btn.classList.add('active');
+  });
+  document.querySelectorAll('.lang-en').forEach(function(el){ el.style.display = (lang==='en' ? '' : 'none'); });
+  document.querySelectorAll('.lang-ta').forEach(function(el){ el.style.display = (lang==='ta' ? '' : 'none'); });
+})();
+
+/* SCROLL REVEAL */
+(function(){
+  var els = document.querySelectorAll('[data-reveal]');
+  var stagger = document.querySelectorAll('[data-stagger] > *');
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(function(el){ observer.observe(el); });
+  stagger.forEach(function(el){ observer.observe(el); });
+  document.querySelectorAll('[data-stagger]').forEach(function(parent){
+    Array.from(parent.children).forEach(function(child){ observer.observe(child); });
+  });
+})();
+
+/* ---- keep existing properties JS ---- */
+(function(){
+  var properties = [
+    // Chennai OMR (6)
+    {id:1,title:{en:'3BHK Apartment in OMR',ta:'ஓஎம்ஆரில் 3 படுக்கையறை அபார்ட்மெண்ட்'},loc:{en:'OMR/IT Corridor, Chennai',ta:'ஓஎம்ஆர்/ஐடி வழித்தடம், சென்னை'},price:6800000,beds:3,baths:2,area:1520,type:'apartment',status:'ready',badge:'featured',img:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800',city:'chennai-omr'},
+    {id:2,title:{en:'2BHK Flat with Pool',ta:'நீச்சல் குளத்துடன் 2 படுக்கையறை பிளாட்'},loc:{en:'OMR, Chennai',ta:'ஓஎம்ஆர், சென்னை'},price:4500000,beds:2,baths:2,area:1100,type:'apartment',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800',city:'chennai-omr'},
+    {id:3,title:{en:'4BHK Penthouse OMR',ta:'ஓஎம்ஆரில் 4 படுக்கையறை பென்ட்ஹவுஸ்'},loc:{en:'OMR, Chennai',ta:'ஓஎம்ஆர், சென்னை'},price:18500000,beds:4,baths:3,area:2800,type:'apartment',status:'under-construction',badge:'new',img:'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800',city:'chennai-omr'},
+    {id:4,title:{en:'Independent House OMR',ta:'ஓஎம்ஆரில் சுயாதீன வீடு'},loc:{en:'OMR, Chennai',ta:'ஓஎம்ஆர், சென்னை'},price:9500000,beds:3,baths:2,area:1800,type:'house',status:'ready',badge:'sale',img:'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800',city:'chennai-omr'},
+    {id:5,title:{en:'Residential Plot OMR',ta:'ஓஎம்ஆரில் குடியிருப்பு மனை'},loc:{en:'OMR, Chennai',ta:'ஓஎம்ஆர், சென்னை'},price:3200000,beds:0,baths:0,area:1200,type:'plot',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800',city:'chennai-omr'},
+    {id:6,title:{en:'Luxury Villa OMR',ta:'ஓஎம்ஆரில் ஆடம்பர வில்லா'},loc:{en:'OMR, Chennai',ta:'ஓஎம்ஆர், சென்னை'},price:25000000,beds:5,baths:4,area:3500,type:'villa',status:'under-construction',badge:'featured',img:'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800',city:'chennai-omr'},
+    // Velachery (6)
+    {id:7,title:{en:'3BHK in Velachery',ta:'வேளச்சேரியில் 3 படுக்கையறை'},loc:{en:'Velachery, Chennai',ta:'வேளச்சேரி, சென்னை'},price:7500000,beds:3,baths:2,area:1450,type:'apartment',status:'ready',badge:'sale',img:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800',city:'chennai-velachery'},
+    {id:8,title:{en:'2BHK Near Phoenix Mall',ta:'பீனிக்ஸ் மால் அருகில் 2 படுக்கையறை'},loc:{en:'Velachery, Chennai',ta:'வேளச்சேரி, சென்னை'},price:5200000,beds:2,baths:1,area:980,type:'apartment',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800',city:'chennai-velachery'},
+    {id:9,title:{en:'Independent House Velachery',ta:'வேளச்சேரியில் சுயாதீன வீடு'},loc:{en:'Velachery, Chennai',ta:'வேளச்சேரி, சென்னை'},price:11000000,beds:4,baths:3,area:2200,type:'house',status:'ready',badge:'featured',img:'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800',city:'chennai-velachery'},
+    {id:10,title:{en:'New Launch Apartments',ta:'புதிய அபார்ட்மெண்ட் திட்டம்'},loc:{en:'Velachery, Chennai',ta:'வேளச்சேரி, சென்னை'},price:6500000,beds:3,baths:2,area:1350,type:'apartment',status:'under-construction',badge:'new',img:'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800',city:'chennai-velachery'},
+    {id:11,title:{en:'Plot in Velachery',ta:'வேளச்சேரியில் மனை'},loc:{en:'Velachery, Chennai',ta:'வேளச்சேரி, சென்னை'},price:2800000,beds:0,baths:0,area:900,type:'plot',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800',city:'chennai-velachery'},
+    {id:12,title:{en:'Villa Velachery Lake View',ta:'வேளச்சேரி ஏரி காட்சி வில்லா'},loc:{en:'Velachery, Chennai',ta:'வேளச்சேரி, சென்னை'},price:19500000,beds:4,baths:4,area:3000,type:'villa',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800',city:'chennai-velachery'},
+    // Adyar (6)
+    {id:13,title:{en:'3BHK in Adyar',ta:'அடையாரில் 3 படுக்கையறை'},loc:{en:'Adyar, Chennai',ta:'அடையார், சென்னை'},price:8500000,beds:3,baths:2,area:1600,type:'apartment',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800',city:'chennai-adyar'},
+    {id:14,title:{en:'Heritage House Adyar',ta:'அடையாரில் பாரம்பரிய வீடு'},loc:{en:'Adyar, Chennai',ta:'அடையார், சென்னை'},price:15000000,beds:4,baths:3,area:2500,type:'house',status:'ready',badge:'featured',img:'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800',city:'chennai-adyar'},
+    {id:15,title:{en:'Luxury Apartment Adyar',ta:'அடையாரில் ஆடம்பர அபார்ட்மெண்ட்'},loc:{en:'Adyar, Chennai',ta:'அடையார், சென்னை'},price:22000000,beds:4,baths:3,area:2400,type:'apartment',status:'under-construction',badge:'new',img:'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800',city:'chennai-adyar'},
+    {id:16,title:{en:'2BHK Adyar',ta:'அடையாரில் 2 படுக்கையறை'},loc:{en:'Adyar, Chennai',ta:'அடையார், சென்னை'},price:5500000,beds:2,baths:1,area:950,type:'apartment',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800',city:'chennai-adyar'},
+    {id:17,title:{en:'Plot Adyar',ta:'அடையாரில் மனை'},loc:{en:'Adyar, Chennai',ta:'அடையார், சென்னை'},price:4500000,beds:0,baths:0,area:1500,type:'plot',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800',city:'chennai-adyar'},
+    {id:18,title:{en:'Villa Adyar River View',ta:'அடையார் ஆற்றங்கரை வில்லா'},loc:{en:'Adyar, Chennai',ta:'அடையார், சென்னை'},price:35000000,beds:5,baths:5,area:4200,type:'villa',status:'ready',badge:'featured',img:'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800',city:'chennai-adyar'},
+    // Porur (6)
+    {id:19,title:{en:'3BHK Porur',ta:'போரூரில் 3 படுக்கையறை'},loc:{en:'Porur, Chennai',ta:'போரூர், சென்னை'},price:5800000,beds:3,baths:2,area:1350,type:'apartment',status:'ready',badge:'sale',img:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800',city:'chennai-porur'},
+    {id:20,title:{en:'2BHK Porur',ta:'போரூரில் 2 படுக்கையறை'},loc:{en:'Porur, Chennai',ta:'போரூர், சென்னை'},price:3800000,beds:2,baths:1,area:850,type:'apartment',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800',city:'chennai-porur'},
+    {id:21,title:{en:'Independent House Porur',ta:'போரூரில் சுயாதீன வீடு'},loc:{en:'Porur, Chennai',ta:'போரூர், சென்னை'},price:8200000,beds:3,baths:2,area:1700,type:'house',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800',city:'chennai-porur'},
+    {id:22,title:{en:'New Project Porur',ta:'போரூரில் புதிய திட்டம்'},loc:{en:'Porur, Chennai',ta:'போரூர், சென்னை'},price:4800000,beds:2,baths:2,area:1050,type:'apartment',status:'under-construction',badge:'new',img:'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800',city:'chennai-porur'},
+    {id:23,title:{en:'Plot Porur',ta:'போரூரில் மனை'},loc:{en:'Porur, Chennai',ta:'போரூர், சென்னை'},price:2200000,beds:0,baths:0,area:800,type:'plot',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800',city:'chennai-porur'},
+    {id:24,title:{en:'Villa Porur',ta:'போரூரில் வில்லா'},loc:{en:'Porur, Chennai',ta:'போரூர், சென்னை'},price:14000000,beds:4,baths:3,area:2600,type:'villa',status:'under-construction',badge:'',img:'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800',city:'chennai-porur'},
+    // Coimbatore (6)
+    {id:25,title:{en:'4BHK Villa Coimbatore',ta:'கோயம்புத்தூரில் 4 படுக்கையறை வில்லா'},loc:{en:'Coimbatore',ta:'கோயம்புத்தூர்'},price:12000000,beds:4,baths:3,area:2400,type:'villa',status:'ready',badge:'new',img:'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800',city:'coimbatore'},
+    {id:26,title:{en:'3BHK Apartment Coimbatore',ta:'கோயம்புத்தூரில் 3 படுக்கையறை அபார்ட்மெண்ட்'},loc:{en:'Coimbatore',ta:'கோயம்புத்தூர்'},price:5500000,beds:3,baths:2,area:1400,type:'apartment',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800',city:'coimbatore'},
+    {id:27,title:{en:'Independent House Coimbatore',ta:'கோயம்புத்தூரில் சுயாதீன வீடு'},loc:{en:'Coimbatore',ta:'கோயம்புத்தூர்'},price:7800000,beds:3,baths:2,area:2000,type:'house',status:'ready',badge:'sale',img:'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800',city:'coimbatore'},
+    {id:28,title:{en:'2BHK Coimbatore',ta:'கோயம்புத்தூரில் 2 படுக்கையறை'},loc:{en:'Coimbatore',ta:'கோயம்புத்தூர்'},price:3500000,beds:2,baths:1,area:900,type:'apartment',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800',city:'coimbatore'},
+    {id:29,title:{en:'Plot Coimbatore',ta:'கோயம்புத்தூரில் மனை'},loc:{en:'Coimbatore',ta:'கோயம்புத்தூர்'},price:1800000,beds:0,baths:0,area:600,type:'plot',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800',city:'coimbatore'},
+    {id:30,title:{en:'Luxury Apartment Coimbatore',ta:'கோயம்புத்தூரில் ஆடம்பர அபார்ட்மெண்ட்'},loc:{en:'Coimbatore',ta:'கோயம்புத்தூர்'},price:9500000,beds:3,baths:2,area:1800,type:'apartment',status:'under-construction',badge:'featured',img:'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800',city:'coimbatore'},
+    // Madurai (6)
+    {id:31,title:{en:'3BHK Madurai',ta:'மதுரையில் 3 படுக்கையறை'},loc:{en:'Madurai',ta:'மதுரை'},price:4200000,beds:3,baths:2,area:1300,type:'apartment',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800',city:'madurai'},
+    {id:32,title:{en:'Independent House Madurai',ta:'மதுரையில் சுயாதீன வீடு'},loc:{en:'Madurai',ta:'மதுரை'},price:6500000,beds:3,baths:2,area:1600,type:'house',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800',city:'madurai'},
+    {id:33,title:{en:'2BHK Madurai',ta:'மதுரையில் 2 படுக்கையறை'},loc:{en:'Madurai',ta:'மதுரை'},price:2800000,beds:2,baths:1,area:800,type:'apartment',status:'ready',badge:'sale',img:'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800',city:'madurai'},
+    {id:34,title:{en:'Villa Madurai',ta:'மதுரையில் வில்லா'},loc:{en:'Madurai',ta:'மதுரை'},price:8500000,beds:4,baths:3,area:2200,type:'villa',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800',city:'madurai'},
+    {id:35,title:{en:'Plot Madurai',ta:'மதுரையில் மனை'},loc:{en:'Madurai',ta:'மதுரை'},price:1500000,beds:0,baths:0,area:600,type:'plot',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800',city:'madurai'},
+    {id:36,title:{en:'New Apartment Madurai',ta:'மதுரையில் புதிய அபார்ட்மெண்ட்'},loc:{en:'Madurai',ta:'மதுரை'},price:3800000,beds:2,baths:2,area:1050,type:'apartment',status:'under-construction',badge:'new',img:'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800',city:'madurai'},
+    // Chengalpattu (6)
+    {id:37,title:{en:'3BHK Chengalpattu',ta:'செங்கல்பட்டில் 3 படுக்கையறை'},loc:{en:'Chengalpattu',ta:'செங்கல்பட்டு'},price:3500000,beds:3,baths:2,area:1250,type:'apartment',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800',city:'chengalpattu'},
+    {id:38,title:{en:'House Chengalpattu',ta:'செங்கல்பட்டில் வீடு'},loc:{en:'Chengalpattu',ta:'செங்கல்பட்டு'},price:5800000,beds:3,baths:2,area:1500,type:'house',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800',city:'chengalpattu'},
+    {id:39,title:{en:'Plot Chengalpattu',ta:'செங்கல்பட்டில் மனை'},loc:{en:'Chengalpattu',ta:'செங்கல்பட்டு'},price:1200000,beds:0,baths:0,area:500,type:'plot',status:'ready',badge:'sale',img:'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800',city:'chengalpattu'},
+    {id:40,title:{en:'2BHK Chengalpattu',ta:'செங்கல்பட்டில் 2 படுக்கையறை'},loc:{en:'Chengalpattu',ta:'செங்கல்பட்டு'},price:2500000,beds:2,baths:1,area:750,type:'apartment',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800',city:'chengalpattu'},
+    {id:41,title:{en:'Villa Chengalpattu',ta:'செங்கல்பட்டில் வில்லா'},loc:{en:'Chengalpattu',ta:'செங்கல்பட்டு'},price:7200000,beds:3,baths:3,area:2000,type:'villa',status:'under-construction',badge:'new',img:'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800',city:'chengalpattu'},
+    {id:42,title:{en:'Budget Flat Chengalpattu',ta:'செங்கல்பட்டில் மலிவு பிளாட்'},loc:{en:'Chengalpattu',ta:'செங்கல்பட்டு'},price:1800000,beds:1,baths:1,area:550,type:'apartment',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800',city:'chengalpattu'},
+    // Tambaram (6)
+    {id:43,title:{en:'3BHK Tambaram',ta:'தாம்பரத்தில் 3 படுக்கையறை'},loc:{en:'Tambaram, Chennai',ta:'தாம்பரம், சென்னை'},price:4800000,beds:3,baths:2,area:1300,type:'apartment',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800',city:'chennai-omr'},
+    {id:44,title:{en:'House Tambaram',ta:'தாம்பரத்தில் வீடு'},loc:{en:'Tambaram, Chennai',ta:'தாம்பரம், சென்னை'},price:6800000,beds:3,baths:2,area:1700,type:'house',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800',city:'chennai-omr'},
+    {id:45,title:{en:'Plot Tambaram',ta:'தாம்பரத்தில் மனை'},loc:{en:'Tambaram, Chennai',ta:'தாம்பரம், சென்னை'},price:1600000,beds:0,baths:0,area:600,type:'plot',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800',city:'chennai-omr'},
+    {id:46,title:{en:'New Launch Tambaram',ta:'தாம்பரத்தில் புதிய திட்டம்'},loc:{en:'Tambaram, Chennai',ta:'தாம்பரம், சென்னை'},price:4200000,beds:2,baths:2,area:1100,type:'apartment',status:'under-construction',badge:'new',img:'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800',city:'chennai-omr'},
+    {id:47,title:{en:'Villa Tambaram',ta:'தாம்பரத்தில் வில்லா'},loc:{en:'Tambaram, Chennai',ta:'தாம்பரம், சென்னை'},price:11000000,beds:4,baths:3,area:2400,type:'villa',status:'ready',badge:'featured',img:'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800',city:'chennai-omr'},
+    {id:48,title:{en:'2BHK Tambaram',ta:'தாம்பரத்தில் 2 படுக்கையறை'},loc:{en:'Tambaram, Chennai',ta:'தாம்பரம், சென்னை'},price:3200000,beds:2,baths:1,area:850,type:'apartment',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800',city:'chennai-omr'},
+    // Sholinganallur (6)
+    {id:49,title:{en:'3BHK Sholinganallur',ta:'சோழிங்கநல்லூரில் 3 படுக்கையறை'},loc:{en:'Sholinganallur, Chennai',ta:'சோழிங்கநல்லூர், சென்னை'},price:6200000,beds:3,baths:2,area:1400,type:'apartment',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800',city:'chennai-omr'},
+    {id:50,title:{en:'Villa Sholinganallur',ta:'சோழிங்கநல்லூரில் வில்லா'},loc:{en:'Sholinganallur, Chennai',ta:'சோழிங்கநல்லூர், சென்னை'},price:16500000,beds:4,baths:3,area:2800,type:'villa',status:'ready',badge:'featured',img:'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800',city:'chennai-omr'},
+    {id:51,title:{en:'2BHK Sholinganallur',ta:'சோழிங்கநல்லூரில் 2 படுக்கையறை'},loc:{en:'Sholinganallur, Chennai',ta:'சோழிங்கநல்லூர், சென்னை'},price:4200000,beds:2,baths:1,area:950,type:'apartment',status:'under-construction',badge:'new',img:'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800',city:'chennai-omr'},
+    {id:52,title:{en:'Plot Sholinganallur',ta:'சோழிங்கநல்லூரில் மனை'},loc:{en:'Sholinganallur, Chennai',ta:'சோழிங்கநல்லூர், சென்னை'},price:3500000,beds:0,baths:0,area:1000,type:'plot',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800',city:'chennai-omr'},
+    {id:53,title:{en:'House Sholinganallur',ta:'சோழிங்கநல்லூரில் வீடு'},loc:{en:'Sholinganallur, Chennai',ta:'சோழிங்கநல்லூர், சென்னை'},price:9200000,beds:3,baths:2,area:1900,type:'house',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800',city:'chennai-omr'},
+    {id:54,title:{en:'Studio Sholinganallur',ta:'சோழிங்கநல்லூரில் ஸ்டுடியோ'},loc:{en:'Sholinganallur, Chennai',ta:'சோழிங்கநல்லூர், சென்னை'},price:2200000,beds:1,baths:1,area:450,type:'apartment',status:'ready',badge:'',img:'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800',city:'chennai-omr'}
+  ];
+
+  var cities = {'chennai-omr':'Chennai — OMR','chennai-velachery':'Chennai — Velachery','chennai-adyar':'Chennai — Adyar','chennai-porur':'Chennai — Porur','coimbatore':'Coimbatore','madurai':'Madurai','chengalpattu':'Chengalpattu'};
+  var types = {'apartment':'Apartment','house':'House','villa':'Villa','plot':'Plot'};
+  var statuses = {'ready':'Ready to Move','under-construction':'Under Construction'};
+
+  var pageSize = 6, currentPage = 1;
+
+  function populateFilters(){
+    var locSel = document.getElementById('filterLocation'), typeSel = document.getElementById('filterType'), bhkSel = document.getElementById('filterBHK'), statSel = document.getElementById('filterStatus');
+    var locs = {}, typs = {}, bhks = {}, stats = {};
+    properties.forEach(function(p){
+      locs[p.city] = true; typs[p.type] = true; stats[p.status] = true;
+      if(p.beds>0) bhks[p.beds] = true;
+    });
+    Object.keys(cities).forEach(function(k){ var o=document.createElement('option'); o.value=k; o.textContent=cities[k]; locSel.appendChild(o); });
+    Object.keys(types).forEach(function(k){ var o=document.createElement('option'); o.value=k; o.textContent=types[k]; typeSel.appendChild(o); });
+    Object.keys(bhks).sort().forEach(function(k){ var o=document.createElement('option'); o.value=k; o.textContent=k+' BHK'; bhkSel.appendChild(o); });
+    Object.keys(statuses).forEach(function(k){ var o=document.createElement('option'); o.value=k; o.textContent=statuses[k]; statSel.appendChild(o); });
+  }
+
+  function formatPrice(p){
+    return p>=10000000?'₹'+(p/10000000).toFixed(1)+' Cr':'₹'+(p/100000).toFixed(1)+' Lakhs';
+  }
+
+  function applyFilters(){
+    var loc = document.getElementById('filterLocation').value;
+    var typ = document.getElementById('filterType').value;
+    var bud = document.getElementById('filterBudget').value;
+    var bhk = document.getElementById('filterBHK').value;
+    var stat = document.getElementById('filterStatus').value;
+    var sort = document.getElementById('sortSelect').value;
+    var lang = localStorage.getItem('ae-lang')||'en';
+
+    var filtered = properties.filter(function(p){
+      if(loc!=='all' && p.city!==loc) return false;
+      if(typ!=='all' && p.type!==typ) return false;
+      if(bhk!=='all' && p.beds!=parseInt(bhk)) return false;
+      if(stat!=='all' && p.status!==stat) return false;
+      if(bud!=='all'){
+        var parts = bud.split('-');
+        if(p.price<parseInt(parts[0]) || p.price>parseInt(parts[1])) return false;
+      }
+      return true;
+    });
+
+    switch(sort){
+      case 'price-low': filtered.sort(function(a,b){return a.price-b.price}); break;
+      case 'price-high': filtered.sort(function(a,b){return b.price-a.price}); break;
+      case 'area': filtered.sort(function(a,b){return b.area-a.area}); break;
+      case 'newest': filtered.sort(function(a,b){return b.id-a.id}); break;
+    }
+
+    currentPage = 1;
+    renderResults(filtered, lang);
+  }
+
+  function renderResults(data, lang){
+    var total = data.length, pages = Math.ceil(total/pageSize);
+    var start = (currentPage-1)*pageSize, end = Math.min(start+pageSize, total);
+    var pageData = data.slice(start, end);
+    var grid = document.getElementById('propertyGrid');
+    var h = '';
+    pageData.forEach(function(p){
+      var bt = p.badge==='featured'?'Featured':p.badge==='new'?'New':p.badge==='sale'?'For Sale':'';
+      var bc = p.badge?'badge-'+p.badge:'';
+      var t = p.title[lang]||p.title.en;
+      var l = p.loc[lang]||p.loc.en;
+      h += '<div class="property-card">'+
+        '<div class="property-card-image"><img src="'+p.img+'" alt="'+t+'" loading="lazy">'+
+        (bt?'<span class="property-badge '+bc+'">'+bt+'</span>':'')+
+        '</div><div class="property-card-body">'+
+        '<div class="property-price">'+formatPrice(p.price)+'</div>'+
+        '<h3 class="property-title">'+t+'</h3>'+
+        '<p class="property-location"><i class="fas fa-map-marker-alt"></i> '+l+'</p>'+
+        '<div class="property-features">'+
+        (p.beds?'<span class="property-feature"><i class="fas fa-bed"></i> '+p.beds+' Beds</span>':'')+
+        (p.baths?'<span class="property-feature"><i class="fas fa-bath"></i> '+p.baths+' Baths</span>':'')+
+        '<span class="property-feature"><i class="fas fa-ruler-combined"></i> '+p.area+' sq.ft</span>'+
+        '</div></div>'+
+        '<div class="property-card-footer" style="padding:0 20px 20px;display:flex;gap:8px;">'+
+        '<a href="property-detail.html" class="btn btn-sm btn-green">View Details</a>'+
+        '<a href="https://wa.me/9198400XXXXX?text=Hi%20Arunagiri%20Estates%2C%20I%27m%20interested%20in%20'+encodeURIComponent(t)+'" target="_blank" class="btn btn-sm btn-outline"><i class="fab fa-whatsapp"></i> Enquire</a>'+
+        '</div></div>';
+    });
+    grid.innerHTML = h;
+
+    document.getElementById('resultCount').textContent = (lang==='ta'?'காண்பிக்கப்பட்டது ':'Showing ')+ (start+1) +'-'+ end + (lang==='ta'?' இன் ':' of ')+ total + (lang==='ta'?' சொத்துக்கள்':' properties');
+    document.getElementById('noResults').style.display = total===0?'block':'none';
+    grid.style.display = total===0?'none':'grid';
+
+    renderPagination(pages, lang);
+  }
+
+  function renderPagination(pages, lang){
+    var p = document.getElementById('pagination');
+    if(pages<=1){ p.innerHTML=''; return; }
+    var h = '';
+    if(currentPage>1) h+='<a href="#" onclick="goPage('+(currentPage-1)+');return false;"><i class="fas fa-chevron-left"></i></a>';
+    for(var i=1;i<=pages;i++){
+      h+= i===currentPage?'<span class="active">'+i+'</span>':'<a href="#" onclick="goPage('+i+');return false;">'+i+'</a>';
+    }
+    if(currentPage<pages) h+='<a href="#" onclick="goPage('+(currentPage+1)+');return false;"><i class="fas fa-chevron-right"></i></a>';
+    p.innerHTML = h;
+  }
+
+  function goPage(n){ currentPage=n; var lang=localStorage.getItem('ae-lang')||'en'; renderResults(getFilteredData(), lang); }
+
+  function getFilteredData(){
+    var loc = document.getElementById('filterLocation').value;
+    var typ = document.getElementById('filterType').value;
+    var bud = document.getElementById('filterBudget').value;
+    var bhk = document.getElementById('filterBHK').value;
+    var stat = document.getElementById('filterStatus').value;
+    var sort = document.getElementById('sortSelect').value;
+    var filtered = properties.filter(function(p){
+      if(loc!=='all' && p.city!==loc) return false;
+      if(typ!=='all' && p.type!==typ) return false;
+      if(bhk!=='all' && p.beds!=parseInt(bhk)) return false;
+      if(stat!=='all' && p.status!==stat) return false;
+      if(bud!=='all'){ var parts=bud.split('-'); if(p.price<parseInt(parts[0])||p.price>parseInt(parts[1])) return false; }
+      return true;
+    });
+    switch(sort){
+      case 'price-low': filtered.sort(function(a,b){return a.price-b.price}); break;
+      case 'price-high': filtered.sort(function(a,b){return b.price-a.price}); break;
+      case 'area': filtered.sort(function(a,b){return b.area-a.area}); break;
+      case 'newest': filtered.sort(function(a,b){return b.id-a.id}); break;
+    }
+    return filtered;
+  }
+
+  function resetFilters(){
+    document.getElementById('filterForm').reset();
+    applyFilters();
+  }
+
+  function setLang(l){
+    localStorage.setItem('ae-lang',l);
+    document.querySelectorAll('.lang-en,.lang-ta').forEach(function(e){
+      if(e.classList.contains('lang-'+l)) e.style.display='';
+      else if(e.classList.contains('lang-en')||e.classList.contains('lang-ta')) e.style.display='none';
+    });
+    document.querySelectorAll('.lang-toggle button').forEach(function(b){b.classList.toggle('active',b.getAttribute('data-lang')===l)});
+    document.documentElement.lang=l==='ta'?'ta':'en';
+    applyFilters();
+  }
+
+  document.addEventListener('DOMContentLoaded',function(){
+    var cl=localStorage.getItem('ae-lang')||'en';
+    setLang(cl);
+    document.querySelectorAll('.lang-toggle button').forEach(function(b){b.addEventListener('click',function(){setLang(this.getAttribute('data-lang'))})});
+    // Parse URL params
+    var params = new URLSearchParams(window.location.search);
+    if(params.get('city')){
+      var sel = document.getElementById('filterLocation');
+      for(var i=0;i<sel.options.length;i++){ if(sel.options[i].value===params.get('city')){ sel.selectedIndex=i; break; }}
+    }
+    if(params.get('type')){
+      var sel2 = document.getElementById('filterType');
+      for(var i=0;i<sel2.options.length;i++){ if(sel2.options[i].value===params.get('type')){ sel2.selectedIndex=i; break; }}
+    }
+    populateFilters();
+    applyFilters();
+    // Back to top
+    var bt=document.querySelector('.back-to-top');
+    if(bt){window.addEventListener('scroll',function(){bt.classList.toggle('visible',window.pageYOffset>400)});bt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})}
+    // Menu
+    var mt=document.querySelector('.menu-toggle'),nl=document.querySelector('.nav-list');
+    if(mt&&nl){mt.addEventListener('click',function(){this.classList.toggle('active');nl.classList.toggle('open')});document.querySelectorAll('.nav-link').forEach(function(l){l.addEventListener('click',function(){mt.classList.remove('active');nl.classList.remove('open')})})}
+    // Header
+    var hd=document.querySelector('.header');
+    if(hd){window.addEventListener('scroll',function(){hd.classList.toggle('scrolled',window.pageYOffset>50)})}
+    // Year
+    var yr=document.getElementById('current-year');if(yr)yr.textContent=new Date().getFullYear();
+    // Reveal
+    if('IntersectionObserver'in window){
+      var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target)}})},{threshold:0.1});
+      document.querySelectorAll('[data-reveal]').forEach(function(e){ro.observe(e)});
+    }
+  });
+
+  window.goPage = goPage;
+  window.applyFilters = applyFilters;
+  window.resetFilters = resetFilters;
+})();
+</script>
+</body>
+</html>

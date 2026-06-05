@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arunagiri Estates & Homes | Trusted Real Estate in Chennai & Tamil Nadu</title>
+  <meta name="description" content="Chennai's most trusted real estate partner since 2009. Buy, sell, or invest in residential properties across Tamil Nadu — OMR, Velachery, Adyar, Coimbatore.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="LogoRealestate.png">
+  <meta property="og:title" content="Arunagiri Estates & Homes | Trusted Real Estate in Chennai">
+  <meta property="og:description" content="Your Dream Home, Our Dedicated Journey. 15+ years serving Tamil Nadu.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=1200">
+  <script type="application/ld+json">
+  { "@context":"https://schema.org", "@type":"RealEstateAgent", "name":"Arunagiri Estates & Homes", "url":"https://arunagiriestates.com", "telephone":"+9198400XXXXX", "areaServed":["Chennai","Coimbatore","Madurai","Chengalpattu"], "address":{ "@type":"PostalAddress", "streetAddress":"No.14, Gandhi Nagar, 2nd Main Road, Adyar", "addressLocality":"Chennai", "addressRegion":"Tamil Nadu", "postalCode":"600020" }, "priceRange":"₹15L - ₹2Cr" }
+  </script>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <img src="LogoRealestate.png" alt="Arunagiri Estates">
+        <span>Arunagiri</span><span class="gold">Estates</span>
+      </a>
+      <div class="header-nav" id="headerNav">
+        <a href="index.html" class="active lang-en">Home</a><a href="index.html" class="active lang-ta" style="display:none">முகப்பு</a>
+        <a href="about.html" class="lang-en">About</a><a href="about.html" class="lang-ta" style="display:none">அறிமுகம்</a>
+        <a href="properties.html" class="lang-en">Properties</a><a href="properties.html" class="lang-ta" style="display:none">சொத்துக்கள்</a>
+        <a href="services.html" class="lang-en">Services</a><a href="services.html" class="lang-ta" style="display:none">சேவைகள்</a>
+        <a href="nri.html" class="lang-en">NRI</a><a href="nri.html" class="lang-ta" style="display:none">என்.ஆர்.ஐ</a>
+        <a href="contact.html" class="lang-en">Contact</a><a href="contact.html" class="lang-ta" style="display:none">தொடர்பு</a>
+        <div class="header-lang">
+          <button data-lang="en" class="active">EN</button>
+          <button data-lang="ta">த</button>
+        </div>
+      </div>
+      <button class="header-menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=1920&q=80" alt="Chennai skyline">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div data-reveal>
+        <span class="hero-badge lang-en">Trusted Since 2009</span>
+        <span class="hero-badge lang-ta" style="display:none">2009 முதல் நம்பிக்கை</span>
+      </div>
+      <h1 class="hero-title text-giant" data-reveal style="transition-delay:100ms">
+        <span class="lang-en">Your Dream<br>Home, Our<br>Journey</span>
+        <span class="lang-ta" style="display:none">உங்கள் கனவு<br>வீடு, எங்கள்<br>பயணம்</span>
+      </h1>
+      <p class="hero-sub" data-reveal style="transition-delay:200ms">
+        <span class="lang-en">Premium residential properties across Tamil Nadu — from Chennai's prime neighborhoods to Coimbatore's serene landscapes and beyond.</span>
+        <span class="lang-ta" style="display:none">தமிழ்நாடு முழுவதும் முதன்மை குடியிருப்பு சொத்துக்கள் — சென்னையின் முக்கிய பகுதிகள் முதல் கோயம்புத்தூரின் அமைதியான நிலப்பரப்புகள் வரை.</span>
+      </p>
+      <div class="hero-pill-wrap" data-reveal style="transition-delay:300ms">
+        <div class="pill-input-group">
+          <input type="text" class="pill-input" placeholder="Search by city, area or project...">
+          <button class="pill-btn" onclick="handleSearch(this)">
+            <span class="pill-btn-label lang-en">Search</span>
+            <span class="pill-btn-label lang-ta" style="display:none">தேடு</span>
+            <span class="pill-btn-icon"><i class="fas fa-arrow-right"></i></span>
+            <span class="pill-btn-overlay"></span>
+          </button>
+        </div>
+      </div>
+      <div class="hero-stats" data-reveal style="transition-delay:400ms">
+        <div class="hero-stat">
+          <div class="hero-stat-num">15+</div>
+          <div class="hero-stat-label lang-en">Years Trusted</div>
+          <div class="hero-stat-label lang-ta" style="display:none">வருட நம்பிக்கை</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">350+</div>
+          <div class="hero-stat-label lang-en">Families Served</div>
+          <div class="hero-stat-label lang-ta" style="display:none">குடும்பங்கள்</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">6</div>
+          <div class="hero-stat-label lang-en">Cities</div>
+          <div class="hero-stat-label lang-ta" style="display:none">நகரங்கள்</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">54</div>
+          <div class="hero-stat-label lang-en">Properties</div>
+          <div class="hero-stat-label lang-ta" style="display:none">சொத்துக்கள்</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="container">
+      <div class="grid" data-reveal>
+        <div class="g-col-12 lg:g-col-4 lg:g-start-3">
+          <span class="overline lang-en">Who We Are</span>
+          <span class="overline lang-ta" style="display:none">நாங்கள் யார்</span>
+          <h2 class="h1 font-serif" style="color:var(--green);">
+            <span class="lang-en">Built on<br>Trust &amp; Legacy</span>
+            <span class="lang-ta" style="display:none">நம்பிக்கை மற்றும்<br>பாரம்பரியத்தின் மீது</span>
+          </h2>
+        </div>
+        <div class="g-col-12 lg:g-col-5">
+          <p class="text-sm" style="color:var(--text-light); line-height:1.8; margin-top:8px;">
+            <span class="lang-en">Founded in 2009 by K. Arunagiri, we've grown from a small Adyar office to one of Tamil Nadu's most respected real estate firms. Our promise is simple: transparency, local expertise, and a commitment to finding you the perfect home — not just a transaction.</span>
+            <span class="lang-ta" style="display:none">2009 ஆம் ஆண்டு க. அருணகிரியால் நிறுவப்பட்ட நாங்கள், ஒரு சிறிய அடையாறு அலுவலகத்தில் இருந்து தமிழ்நாட்டின் மிகவும் மதிக்கப்படும் ரியல் எஸ்டேட் நிறுவனங்களில் ஒன்றாக வளர்ந்துள்ளோம்.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="container">
+      <div data-reveal>
+        <span class="overline" style="color:var(--green);">Featured Properties</span>
+        <div style="display:flex; justify-content:space-between; align-items:end; flex-wrap:wrap; gap:16px;">
+          <h2 class="h1 font-serif lang-en" style="line-height:1.1;">Handpicked<br>for You</h2>
+          <h2 class="h1 font-serif lang-ta" style="display:none; line-height:1.1;">உங்களுக்காக<br>தேர்ந்தெடுக்கப்பட்டவை</h2>
+          <a href="properties.html" class="btn-overlay btn-outline" style="font-size:0.8rem; padding:10px 24px;">
+            <span class="btn-overlay-label lang-en">View All <i class="fas fa-arrow-right"></i></span>
+            <span class="btn-overlay-label lang-ta" style="display:none">அனைத்தையும் காண <i class="fas fa-arrow-right"></i></span>
+            <span class="btn-overlay-inner"></span>
+          </a>
+        </div>
+      </div>
+      <div class="grid mt-40" data-stagger>
+        <div class="g-col-12 lg:g-col-4">
+          <div class="property-card">
+            <img class="property-card-img" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Luxury Villa" loading="lazy">
+            <div class="property-card-body">
+              <span class="property-card-tag lang-en">Featured</span>
+              <span class="property-card-tag lang-ta" style="display:none">சிறப்பு</span>
+              <h3 class="lang-en">OMR Luxury Villa</h3>
+              <h3 class="lang-ta" style="display:none">ஓ.எம்.ஆர் ஆடம்பர வில்லா</h3>
+              <p class="property-card-loc lang-en"><i class="fas fa-map-pin"></i> OMR, Chennai</p>
+              <p class="property-card-loc lang-ta" style="display:none"><i class="fas fa-map-pin"></i> ஓ.எம்.ஆர், சென்னை</p>
+              <div class="property-card-price">₹1.8 Cr</div>
+              <div class="property-card-meta">
+                <span>4 BHK</span>
+                <span>2,400 sqft</span>
+                <span>Ready to Move</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="g-col-12 lg:g-col-4">
+          <div class="property-card">
+            <img class="property-card-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Modern Apartment" loading="lazy">
+            <div class="property-card-body">
+              <span class="property-card-tag lang-en">Popular</span>
+              <span class="property-card-tag lang-ta" style="display:none">பிரபலமான</span>
+              <h3 class="lang-en">Velachery Skyline</h3>
+              <h3 class="lang-ta" style="display:none">வேளச்சேரி ஸ்கைலைன்</h3>
+              <p class="property-card-loc lang-en"><i class="fas fa-map-pin"></i> Velachery, Chennai</p>
+              <p class="property-card-loc lang-ta" style="display:none"><i class="fas fa-map-pin"></i> வேளச்சேரி, சென்னை</p>
+              <div class="property-card-price">₹95 L</div>
+              <div class="property-card-meta">
+                <span>3 BHK</span>
+                <span>1,550 sqft</span>
+                <span>Ready to Move</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="g-col-12 lg:g-col-4">
+          <div class="property-card">
+            <img class="property-card-img" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Premium Plot" loading="lazy">
+            <div class="property-card-body">
+              <span class="property-card-tag lang-en">New Launch</span>
+              <span class="property-card-tag lang-ta" style="display:none">புதிய வெளியீடு</span>
+              <h3 class="lang-en">Coimbatore Greens</h3>
+              <h3 class="lang-ta" style="display:none">கோயம்புத்தூர் கிரீன்ஸ்</h3>
+              <p class="property-card-loc lang-en"><i class="fas fa-map-pin"></i> Saravanampatti, Coimbatore</p>
+              <p class="property-card-loc lang-ta" style="display:none"><i class="fas fa-map-pin"></i> சரவணம்பட்டி, கோயம்புத்தூர்</p>
+              <div class="property-card-price">₹42 L</div>
+              <div class="property-card-meta">
+                <span>Plot</span>
+                <span>1,800 sqft</span>
+                <span>Under Construction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="container">
+      <div data-reveal class="text-center" style="max-width:600px; margin:0 auto 48px;">
+        <span class="overline" style="color:var(--green);">Our Services</span>
+        <h2 class="h1 font-serif lang-en">What We Offer</h2>
+        <h2 class="h1 font-serif lang-ta" style="display:none">நாங்கள் வழங்குவது</h2>
+      </div>
+      <div class="grid" data-stagger>
+        <div class="g-col-12 lg:g-col-4">
+          <div class="service-card card-sharp-top">
+            <div class="service-card-icon"><i class="fas fa-home"></i></div>
+            <h3 class="lang-en">Buy a Home</h3>
+            <h3 class="lang-ta" style="display:none">வீடு வாங்க</h3>
+            <p class="lang-en">Curated listings across 6 cities, personalized site visits, and expert negotiation.</p>
+            <p class="lang-ta" style="display:none">6 நகரங்களில் தேர்ந்தெடுக்கப்பட்ட பட்டியல்கள், தனிப்பயன் இடம் பார்வைகள் மற்றும் நிபுணர் பேச்சுவார்த்தை.</p>
+          </div>
+        </div>
+        <div class="g-col-12 lg:g-col-4">
+          <div class="service-card card-sharp-top green-top">
+            <div class="service-card-icon" style="background:rgba(27,94,32,0.1); color:var(--green);"><i class="fas fa-handshake"></i></div>
+            <h3 class="lang-en">Sell Your Property</h3>
+            <h3 class="lang-ta" style="display:none">உங்கள் சொத்தை விற்க</h3>
+            <p class="lang-en">Get the best market value with our extensive buyer network and strategic marketing.</p>
+            <p class="lang-ta" style="display:none">எங்கள் விரிவான வாங்குநர் வலையமைப்பு மற்றும் மூலோபாய சந்தைப்படுத்தலுடன் சிறந்த சந்தை மதிப்பு.</p>
+          </div>
+        </div>
+        <div class="g-col-12 lg:g-col-4">
+          <div class="service-card card-sharp-top">
+            <div class="service-card-icon"><i class="fas fa-chart-line"></i></div>
+            <h3 class="lang-en">Investment Advisory</h3>
+            <h3 class="lang-ta" style="display:none">முதலீட்டு ஆலோசனை</h3>
+            <p class="lang-en">Data-driven insights on high-growth corridors, rental yields, and market timing.</p>
+            <p class="lang-ta" style="display:none">அதிக வளர்ச்சி வாய்ப்புகள், வாடகை வருமானம் மற்றும் சந்தை நேரம் பற்றிய தரவு சார்ந்த நுண்ணறிவுகள்.</p>
+          </div>
+        </div>
+        <div class="g-col-12 lg:g-col-4">
+          <div class="service-card card-sharp-top green-top">
+            <div class="service-card-icon" style="background:rgba(27,94,32,0.1); color:var(--green);"><i class="fas fa-gavel"></i></div>
+            <h3 class="lang-en">Legal Assistance</h3>
+            <h3 class="lang-ta" style="display:none">சட்ட உதவி</h3>
+            <p class="lang-en">End-to-end title verification, due diligence, and documentation support.</p>
+            <p class="lang-ta" style="display:none">முழு தலைப்பு சரிபார்ப்பு, உரிய விசாரணை மற்றும் ஆவண ஆதரவு.</p>
+          </div>
+        </div>
+        <div class="g-col-12 lg:g-col-4">
+          <div class="service-card card-sharp-top">
+            <div class="service-card-icon"><i class="fas fa-landmark"></i></div>
+            <h3 class="lang-en">NRI Services</h3>
+            <h3 class="lang-ta" style="display:none">என்.ஆர்.ஐ சேவைகள்</h3>
+            <p class="lang-en">Complete remote buying experience — virtual tours, POA, and legal handling.</p>
+            <p class="lang-ta" style="display:none">முழுமையான தொலைசார் வாங்கும் அனுபவம் — மெய்நிகர் சுற்றுலாக்கள், பி.ஓ.ஏ மற்றும் சட்ட கையாளுதல்.</p>
+          </div>
+        </div>
+        <div class="g-col-12 lg:g-col-4">
+          <div class="service-card card-sharp-top green-top">
+            <div class="service-card-icon" style="background:rgba(27,94,32,0.1); color:var(--green);"><i class="fas fa-building"></i></div>
+            <h3 class="lang-en">Property Management</h3>
+            <h3 class="lang-ta" style="display:none">சொத்து மேலாண்மை</h3>
+            <p class="lang-en">Rent collection, maintenance coordination, and tenant management services.</p>
+            <p class="lang-ta" style="display:none">வாடகை வசூல், பராமரிப்பு ஒருங்கிணைப்பு மற்றும் குத்தகையாளர் மேலாண்மை சேவைகள்.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-40" data-reveal>
+        <a href="services.html" class="btn-overlay btn-green">
+          <span class="btn-overlay-label lang-en">Explore All Services <i class="fas fa-arrow-right"></i></span>
+          <span class="btn-overlay-label lang-ta" style="display:none">அனைத்து சேவைகளையும் காண <i class="fas fa-arrow-right"></i></span>
+          <span class="btn-overlay-inner"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="container">
+      <div class="grid" data-reveal>
+        <div class="g-col-12 lg:g-col-3 lg:g-start-2">
+          <span class="overline" style="color:var(--gold);">Why Choose Us</span>
+          <h2 class="h1 font-serif lang-en" style="color:var(--white);">More Than<br>Just a Broker</h2>
+          <h2 class="h1 font-serif lang-ta" style="display:none; color:var(--white);">ஒரு தரகர்<br>மட்டுமல்ல</h2>
+        </div>
+        <div class="g-col-12 lg:g-col-6">
+          <p style="color:rgba(245,240,225,0.6); line-height:1.8; margin-top:8px;">
+            <span class="lang-en">Every family we work with carries a story, a dream, a future. We don't just close deals — we build relationships that span generations. From young couples buying their first home to NRI investors diversifying their portfolio, our approach is rooted in trust, patience, and deep local knowledge.</span>
+            <span class="lang-ta" style="display:none">நாங்கள் பணியாற்றும் ஒவ்வொரு குடும்பமும் ஒரு கதை, ஒரு கனவு, எதிர்காலத்தை சுமந்து செல்கிறது. நாங்கள் ஒப்பந்தங்களை மட்டும் மூடுவதில்லை — தலைமுறைகள் வரை நீடிக்கும் உறவுகளை உருவாக்குகிறோம்.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-48 col-end-bleed">
+      <div class="grid" data-reveal>
+        <div class="g-col-12 lg:g-col-4">
+          <div class="card-sharp" style="background:var(--obsidian-light); border-color:rgba(197,165,90,0.2);">
+            <div class="card-sharp-icon cream-bg"><i class="fas fa-shield-alt"></i></div>
+            <h3 style="color:var(--white);" class="lang-en">100% Transparency</h3>
+            <h3 style="color:var(--white);" class="lang-ta" style="display:none">100% வெளிப்படைத்தன்மை</h3>
+            <p style="color:rgba(245,240,225,0.5);" class="lang-en">Clear title verification, honest valuations, no hidden charges. What you see is what you get.</p>
+            <p style="color:rgba(245,240,225,0.5);" class="lang-ta" style="display:none">தெளிவான தலைப்பு சரிபார்ப்பு, நேர்மையான மதிப்பீடுகள், மறைக்கப்பட்ட கட்டணங்கள் இல்லை.</p>
+          </div>
+        </div>
+        <div class="g-col-12 lg:g-col-4 lg:g-start-5" style="margin-top:-24px;">
+          <div class="card-sharp" style="background:var(--obsidian-light); border-color:rgba(27,94,32,0.25);">
+            <div class="card-sharp-icon" style="background:rgba(197,165,90,0.15); color:var(--gold);"><i class="fas fa-map-marked-alt"></i></div>
+            <h3 style="color:var(--white);" class="lang-en">Local Expertise</h3>
+            <h3 style="color:var(--white);" class="lang-ta" style="display:none">உள்ளூர் நிபுணத்துவம்</h3>
+            <p style="color:rgba(245,240,225,0.5);" class="lang-en">15+ years navigating Tamil Nadu's real estate landscape. We know every neighborhood intimately.</p>
+            <p style="color:rgba(245,240,225,0.5);" class="lang-ta" style="display:none">15+ வருடங்கள் தமிழ்நாட்டின் ரியல் எஸ்டேட் நிலப்பரப்பில். ஒவ்வொரு பகுதியையும் நெருக்கமாக அறிவோம்.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row-span-2 grid" data-reveal>
+        <div class="g-col-12 lg:g-col-4 lg:g-start-8" style="margin-top:-48px;">
+          <div class="card-sharp" style="background:var(--obsidian-light); border-color:rgba(197,165,90,0.2);">
+            <div class="card-sharp-icon cream-bg"><i class="fas fa-users"></i></div>
+            <h3 style="color:var(--white);" class="lang-en">Client-First Approach</h3>
+            <h3 style="color:var(--white);" class="lang-ta" style="display:none">வாடிக்கையாளர் முதல் அணுகுமுறை</h3>
+            <p style="color:rgba(245,240,225,0.5);" class="lang-en">We listen, we guide, we deliver. Your timeline, your budget, your priorities — always respected.</p>
+            <p style="color:rgba(245,240,225,0.5);" class="lang-ta" style="display:none">நாங்கள் கேட்கிறோம், வழிகாட்டுகிறோம், வழங்குகிறோம். உங்கள் நேரம், உங்கள் பட்ஜெட், உங்கள் முன்னுரிமைகள்.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="container">
+      <div class="grid" data-reveal>
+        <div class="g-col-12 lg:g-col-5">
+          <span class="overline" style="color:var(--green);">Testimonials</span>
+          <h2 class="h1 font-serif lang-en">What Our<br>Families Say</h2>
+          <h2 class="h1 font-serif lang-ta" style="display:none">எங்கள் குடும்பங்கள்<br>சொல்வது என்ன</h2>
+        </div>
+      </div>
+      <div class="grid mt-32" data-stagger>
+        <div class="g-col-12 lg:g-col-4">
+          <div class="card-sharp card-sharp-top">
+            <div style="display:flex; gap:2px; margin-bottom:16px; color:var(--gold);">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p style="font-size:0.9rem; line-height:1.7; color:var(--text-light); margin-bottom:16px;">
+              <span class="lang-en">"Arunagiri helped us find our dream home in Adyar within our budget. The team was patient, transparent, and incredibly knowledgeable about the neighborhood."</span>
+              <span class="lang-ta" style="display:none">"அருணகிரி எங்கள் பட்ஜெட்டில் அடையாறில் எங்கள் கனவு வீட்டைக் கண்டுபிடிக்க உதவினார். குழு பொறுமையாகவும், வெளிப்படையாகவும், பகுதியைப் பற்றி மிகவும் அறிந்தவர்களாகவும் இருந்தனர்."</span>
+            </p>
+            <p style="font-weight:600; font-size:0.85rem;">— R. Priya &amp; Family</p>
+            <p style="font-size:0.7rem; color:var(--text-muted);">Adyar, Chennai</p>
+          </div>
+        </div>
+        <div class="g-col-12 lg:g-col-4">
+          <div class="card-sharp card-sharp-top green-top">
+            <div style="display:flex; gap:2px; margin-bottom:16px; color:var(--gold);">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p style="font-size:0.9rem; line-height:1.7; color:var(--text-light); margin-bottom:16px;">
+              <span class="lang-en">"As an NRI based in the US, I was nervous about investing in Chennai. Their team handled everything remotely — virtual tours, documentation, the works. Flawless."</span>
+              <span class="lang-ta" style="display:none">"அமெரிக்காவில் வசிக்கும் என்.ஆர்.ஐ ஆக, சென்னையில் முதலீடு செய்வதில் நான் பதட்டமாக இருந்தேன். அவர்களின் குழு எல்லாவற்றையும் தொலைதூரத்தில் கையாண்டது."</span>
+            </p>
+            <p style="font-weight:600; font-size:0.85rem;">— S. Venkat</p>
+            <p style="font-size:0.7rem; color:var(--text-muted);">NRI — San Jose, USA</p>
+          </div>
+        </div>
+        <div class="g-col-12 lg:g-col-4">
+          <div class="card-sharp card-sharp-top">
+            <div style="display:flex; gap:2px; margin-bottom:16px; color:var(--gold);">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p style="font-size:0.9rem; line-height:1.7; color:var(--text-light); margin-bottom:16px;">
+              <span class="lang-en">"Sold our family property in Velachery through them. Got a great price, and the entire process was smooth from valuation to closing. Highly recommend."</span>
+              <span class="lang-ta" style="display:none">"எங்கள் குடும்ப சொத்தை வேளச்சேரியில் அவர்கள் மூலம் விற்றோம். சிறந்த விலை கிடைத்தது, மதிப்பீடு முதல் இறுதி வரை முழு செயல்முறையும் சீராக இருந்தது."</span>
+            </p>
+            <p style="font-weight:600; font-size:0.85rem;">— D. Kumaravel</p>
+            <p style="font-size:0.7rem; color:var(--text-muted);">Velachery, Chennai</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-bar">
+    <div class="stats-bar-item">
+      <div class="stats-bar-num" data-count="350">0</div>
+      <div class="stats-bar-label lang-en">Families Served</div>
+      <div class="stats-bar-label lang-ta" style="display:none">குடும்பங்கள் பணியாற்றப்பட்டன</div>
+    </div>
+    <div class="stats-bar-item">
+      <div class="stats-bar-num" data-count="15">0</div>
+      <div class="stats-bar-label lang-en">Years Experience</div>
+      <div class="stats-bar-label lang-ta" style="display:none">வருட அனுபவம்</div>
+    </div>
+    <div class="stats-bar-item">
+      <div class="stats-bar-num" data-count="450">0</div>
+      <div class="stats-bar-label lang-en">Properties Sold</div>
+      <div class="stats-bar-label lang-ta" style="display:none">விற்கப்பட்ட சொத்துக்கள்</div>
+    </div>
+    <div class="stats-bar-item">
+      <div class="stats-bar-num" data-count="98">0</div>
+      <div class="stats-bar-label lang-en">Client Satisfaction %</div>
+      <div class="stats-bar-label lang-ta" style="display:none">வாடிக்கையாளர் திருப்தி %</div>
+    </div>
+  </section>
+
+  <section class="section section-green">
+    <div class="container text-center">
+      <div data-reveal>
+        <h2 class="h1 font-serif lang-en" style="color:var(--white);">Ready to Find<br>Your Perfect Home?</h2>
+        <h2 class="h1 font-serif lang-ta" style="display:none; color:var(--white);">உங்கள் சரியான<br>வீட்டைக் கண்டுபிடிக்க தயாரா?</h2>
+        <p style="color:rgba(245,240,225,0.75); max-width:500px; margin:16px auto 32px;">
+          <span class="lang-en">Let our team guide you through Tamil Nadu's best property options. Free consultation, no obligations.</span>
+          <span class="lang-ta" style="display:none">எங்கள் குழு உங்களை தமிழ்நாட்டின் சிறந்த சொத்து விருப்பங்கள் வழியாக வழிகாட்டட்டும். இலவச ஆலோசனை, எந்த கடமையும் இல்லை.</span>
+        </p>
+        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+          <a href="contact.html" class="btn-overlay btn-dark">
+            <span class="btn-overlay-label lang-en"><i class="fas fa-phone-alt"></i> Get in Touch</span>
+            <span class="btn-overlay-label lang-ta" style="display:none"><i class="fas fa-phone-alt"></i> தொடர்பு கொள்ள</span>
+            <span class="btn-overlay-inner"></span>
+          </a>
+          <a href="https://wa.me/9198400XXXXX" class="btn-overlay btn-gold" target="_blank">
+            <span class="btn-overlay-label lang-en"><i class="fab fa-whatsapp"></i> WhatsApp Us</span>
+            <span class="btn-overlay-label lang-ta" style="display:none"><i class="fab fa-whatsapp"></i> வாட்ஸ்அப்</span>
+            <span class="btn-overlay-inner"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="container">
+      <div data-reveal class="text-center" style="margin-bottom:32px;">
+        <span class="overline" style="color:var(--green);">Trusted Partners</span>
+      </div>
+      <div class="partner-bar" data-reveal>
+        <span>HDFC Bank</span>
+        <span>LIC Housing</span>
+        <span>SBI Home Loans</span>
+        <span>Bajaj Finserv</span>
+        <span>ICICI Bank</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-compact">
+    <div class="container">
+      <div class="footer-compact-logo">
+        <span class="lang-en">© 2026 Arunagiri Estates & Homes — Chennai, Tamil Nadu</span>
+        <span class="lang-ta" style="display:none">© 2026 அருணகிரி எஸ்டேட்ஸ் & ஹோம்ஸ் — சென்னை, தமிழ்நாடு</span>
+      </div>
+      <div class="footer-compact-links">
+        <a href="index.html" class="lang-en">Home</a><a href="index.html" class="lang-ta" style="display:none">முகப்பு</a>
+        <a href="properties.html" class="lang-en">Properties</a><a href="properties.html" class="lang-ta" style="display:none">சொத்துக்கள்</a>
+        <a href="about.html" class="lang-en">About</a><a href="about.html" class="lang-ta" style="display:none">அறிமுகம்</a>
+        <a href="contact.html" class="lang-en">Contact</a><a href="contact.html" class="lang-ta" style="display:none">தொடர்பு</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+<script>
+/* ====== MOBILE MENU ====== */
+document.getElementById('menuToggle').addEventListener('click', function(){
+  document.getElementById('headerNav').classList.toggle('open');
+});
+
+/* ====== LANGUAGE TOGGLE ====== */
+(function(){
+  var lang = localStorage.getItem('aelang') || 'en';
+  document.documentElement.setAttribute('data-lang', lang);
+  document.querySelectorAll('.header-lang button, .top-bar-lang button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var l = this.getAttribute('data-lang');
+      document.documentElement.setAttribute('data-lang', l);
+      localStorage.setItem('aelang', l);
+      document.querySelectorAll('.header-lang button, .top-bar-lang button').forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll('.header-lang button[data-lang="'+l+'"], .top-bar-lang button[data-lang="'+l+'"]').forEach(function(b){ b.classList.add('active'); });
+      // toggle lang-en / lang-ta visibility
+      document.querySelectorAll('.lang-en, .lang-ta').forEach(function(el){
+        if(el.classList.contains('lang-en')) el.style.display = (l==='en' ? '' : 'none');
+        if(el.classList.contains('lang-ta')) el.style.display = (l==='ta' ? '' : 'none');
+      });
+    });
+    if(btn.getAttribute('data-lang')===lang) btn.classList.add('active');
+  });
+  // initial visibility
+  document.querySelectorAll('.lang-en').forEach(function(el){ el.style.display = (lang==='en' ? '' : 'none'); });
+  document.querySelectorAll('.lang-ta').forEach(function(el){ el.style.display = (lang==='ta' ? '' : 'none'); });
+})();
+
+/* ====== SCROLL REVEAL (weareyours/daylight style) ====== */
+(function(){
+  var els = document.querySelectorAll('[data-reveal]');
+  var stagger = document.querySelectorAll('[data-stagger] > *');
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(function(el){ observer.observe(el); });
+  stagger.forEach(function(el){ observer.observe(el); });
+  // also check stagger parents
+  document.querySelectorAll('[data-stagger]').forEach(function(parent){
+    Array.from(parent.children).forEach(function(child){ observer.observe(child); });
+  });
+})();
+
+/* ====== STAT COUNTER ANIMATION ====== */
+(function(){
+  var counters = document.querySelectorAll('[data-count]');
+  var counterObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var el = entry.target;
+        var target = parseInt(el.getAttribute('data-count'));
+        var current = 0;
+        var step = Math.max(1, Math.ceil(target / 60));
+        var timer = setInterval(function(){
+          current += step;
+          if(current >= target){ current = target; clearInterval(timer); }
+          el.textContent = current + (target === 98 ? '%' : '+');
+        }, 25);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(function(el){ counterObserver.observe(el); });
+})();
+
+/* ====== HERO SEARCH ====== */
+function handleSearch(btn){
+  var input = btn.parentElement.querySelector('.pill-input');
+  var q = input.value.trim();
+  if(q) window.location.href = 'properties.html?search=' + encodeURIComponent(q);
+  else window.location.href = 'properties.html';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Arunagiri Estates & Homes</title>
+  <meta name="description" content="Page not found. Navigate back to Arunagiri Estates & Homes — Chennai's trusted real estate partner.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="LogoRealestate.png">
+  <meta property="og:title" content="404 - Page Not Found | Arunagiri Estates & Homes">
+  <meta property="og:description" content="The page you are looking for does not exist. Visit our home page to explore properties.">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <img src="LogoRealestate.png" alt="Arunagiri Estates">
+        <span>Arunagiri</span><span class="gold">Estates</span>
+      </a>
+      <div class="header-nav" id="headerNav">
+        <a href="index.html" class="active lang-en">Home</a><a href="index.html" class="active lang-ta" style="display:none">முகப்பு</a>
+        <a href="about.html" class="lang-en">About</a><a href="about.html" class="lang-ta" style="display:none">அறிமுகம்</a>
+        <a href="properties.html" class="lang-en">Properties</a><a href="properties.html" class="lang-ta" style="display:none">சொத்துக்கள்</a>
+        <a href="services.html" class="lang-en">Services</a><a href="services.html" class="lang-ta" style="display:none">சேவைகள்</a>
+        <a href="nri.html" class="lang-en">NRI</a><a href="nri.html" class="lang-ta" style="display:none">என்.ஆர்.ஐ</a>
+        <a href="contact.html" class="lang-en">Contact</a><a href="contact.html" class="lang-ta" style="display:none">தொடர்பு</a>
+        <div class="header-lang">
+          <button data-lang="en" class="active">EN</button>
+          <button data-lang="ta">த</button>
+        </div>
+      </div>
+      <button class="header-menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="section page-404">
+    <div class="container">
+      <h1>404</h1>
+      <h2 class="lang-en">Page Not Found</h2>
+      <h2 class="lang-ta" style="display:none">பக்கம் கிடைக்கவில்லை</h2>
+      <p class="lang-en">We couldn't find the page you were looking for. It may have been moved, renamed, or is temporarily unavailable.</p>
+      <p class="lang-ta" style="display:none">நீங்கள் தேடிய பக்கம் எங்களுக்கு கிடைக்கவில்லை. அது நகர்த்தப்பட்டிருக்கலாம், மறுபெயரிடப்பட்டிருக்கலாம் அல்லது தற்காலிகமாக கிடைக்காமல் இருக்கலாம்.</p>
+      <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+        <form onsubmit="event.preventDefault(); var q=document.getElementById('search404').value; if(q)window.location='properties.html?search='+encodeURIComponent(q); else window.location='properties.html';" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;">
+          <input type="text" id="search404" placeholder="Search properties..." style="padding:12px 16px;border-radius:var(--radius-pill);border:1px solid var(--border);font-family:var(--font-body);font-size:0.88rem;min-width:260px;">
+          <button type="submit" class="btn btn-gold"><i class="fas fa-search"></i> <span class="lang-en">Search</span><span class="lang-ta" style="display:none">தேடு</span></button>
+        </form>
+        <a href="index.html" class="btn btn-green btn-lg"><i class="fas fa-home"></i> <span class="lang-en">Visit Home</span><span class="lang-ta" style="display:none">முகப்புக்கு செல்ல</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-compact">
+    <div class="container">
+      <div class="footer-compact-logo">
+        <span class="lang-en">© 2026 Arunagiri Estates & Homes — Chennai, Tamil Nadu</span>
+        <span class="lang-ta" style="display:none">© 2026 அருணகிரி எஸ்டேட்ஸ் & ஹோம்ஸ் — சென்னை, தமிழ்நாடு</span>
+      </div>
+      <div class="footer-compact-links">
+        <a href="index.html" class="lang-en">Home</a><a href="index.html" class="lang-ta" style="display:none">முகப்பு</a>
+        <a href="properties.html" class="lang-en">Properties</a><a href="properties.html" class="lang-ta" style="display:none">சொத்துக்கள்</a>
+        <a href="about.html" class="lang-en">About</a><a href="about.html" class="lang-ta" style="display:none">அறிமுகம்</a>
+        <a href="contact.html" class="lang-en">Contact</a><a href="contact.html" class="lang-ta" style="display:none">தொடர்பு</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/9198400XXXXX" target="_blank" class="float-whatsapp"><i class="fab fa-whatsapp"></i><span class="tooltip lang-en">Chat with us</span><span class="tooltip lang-ta" style="display:none">எங்களுடன் பேச</span></a>
+  <button class="back-to-top"><i class="fas fa-chevron-up"></i></button>
+
+<script>
+/* MOBILE MENU */
+document.getElementById('menuToggle').addEventListener('click', function(){
+  document.getElementById('headerNav').classList.toggle('open');
+});
+
+/* LANGUAGE TOGGLE */
+(function(){
+  var lang = localStorage.getItem('aelang') || 'en';
+  document.documentElement.setAttribute('data-lang', lang);
+  document.querySelectorAll('.header-lang button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var l = this.getAttribute('data-lang');
+      document.documentElement.setAttribute('data-lang', l);
+      localStorage.setItem('aelang', l);
+      document.querySelectorAll('.header-lang button').forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll('.header-lang button[data-lang="'+l+'"]').forEach(function(b){ b.classList.add('active'); });
+      document.querySelectorAll('.lang-en').forEach(function(el){ el.style.display = (l==='en' ? '' : 'none'); });
+      document.querySelectorAll('.lang-ta').forEach(function(el){ el.style.display = (l==='ta' ? '' : 'none'); });
+    });
+    if(btn.getAttribute('data-lang')===lang) btn.classList.add('active');
+  });
+  document.querySelectorAll('.lang-en').forEach(function(el){ el.style.display = (lang==='en' ? '' : 'none'); });
+  document.querySelectorAll('.lang-ta').forEach(function(el){ el.style.display = (lang==='ta' ? '' : 'none'); });
+})();
+
+/* SCROLL REVEAL */
+(function(){
+  var els = document.querySelectorAll('[data-reveal]');
+  var stagger = document.querySelectorAll('[data-stagger] > *');
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(function(el){ observer.observe(el); });
+  stagger.forEach(function(el){ observer.observe(el); });
+  document.querySelectorAll('[data-stagger]').forEach(function(parent){
+    Array.from(parent.children).forEach(function(child){ observer.observe(child); });
+  });
+})();
+</script>
+</body>
+</html>
